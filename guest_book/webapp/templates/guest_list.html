@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form class="mt-5"  method="GET" action="/search/" id="searchform">
+      <input style="padding: 5px" class="searchfield" id="searchbox" name="query" type="text" value="{{ request.GET.query }}" placeholder="Search..."/>
+      <button style="width: 125px;height: 52px;" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form><br>
+<div class="shadow p-3 mb-5 bg-white rounded " style="width: 200px">
+    <a href="{% url 'add' %}">ДОБАВИТЬ ЗАПИСЬ</a>
+</div>
+
+{% if guests.count == 0 %}
+    <h3>Нету записей</h3>
+{% endif %}
+{%  for i in guests %}
+
+     <div class="card mt-4" style="border: 2px solid black;border-radius: 8px;">
+          <div class="card-body text-left">
+              <h3>{{ i.name }}({{ i.email }})
+                  <a class="ml-3" style="float: right" data-toggle="modal" data-target="#removeModal_{{ i.id }} "href="{% url 'delete' i.id %}">
+                        <i class="fa fa-remove" style="font-size:30px;"></i>
+                  </a>
+                  <a class="ml-3" style="float: right" href="{% url 'update' i.id %}"><i class="fa fa-edit" style="font-size:30px;"></i></a>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="removeModal_{{ i.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Удаление</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                                Вы действительно хотите удалить?
+                          </div>
+                          <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Нет</button>
+                                <a type="button" class="btn btn-danger" href="{% url 'delete' i.id %}">Да</a>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </h3>
+             <p>{{ i.text }}</p>
+          </div>
+     </div>
+
+{% endfor %}
+
+{%  endblock content %}

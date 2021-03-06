@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block menu %}<li><a href="{% url "guest-list" guest_update.id %}">Вернуться к записи</a></li>{% endblock menu %}
+{% block page_header %}Редактировать запись {{ guest_update.id }}{% endblock page_header %}
+
+{% block content %}
+
+    <div>
+        <h3 align="center" style="margin-top:20px">Редактировать запись</h3>
+        <form action="{% url "update" guest_update.id %}" method="post">
+            {% csrf_token %}
+            {% include "guest_form.html" with button_text="Редактировать " %}
+        <form/>
+    <div/>
+
+{% endblock content %}
