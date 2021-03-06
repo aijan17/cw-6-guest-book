@@ -1,0 +1,92 @@
+[
+{
+  "model": "webapp.guest",
+  "pk": 2,
+  "fields": {
+    "name": "jenni",
+    "email": "jenni@gmail.com",
+    "text": "sdfghjkgbfv\r\nddvdsvdfvdfv\r\nsvdvfbbf",
+    "cread_date": null,
+    "update_date": null,
+    "status": "blocked"
+  }
+},
+{
+  "model": "webapp.guest",
+  "pk": 3,
+  "fields": {
+    "name": "beka",
+    "email": "beka@gmail.com",
+    "text": "dscvdsvffsdd",
+    "cread_date": null,
+    "update_date": null,
+    "status": "blocked"
+  }
+},
+{
+  "model": "webapp.guest",
+  "pk": 14,
+  "fields": {
+    "name": "Бека",
+    "email": "beka@gmail.com",
+    "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an nown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the",
+    "cread_date": "2021-03-06T11:37:23.244Z",
+    "update_date": "2021-03-06T11:54:33.506Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guest",
+  "pk": 15,
+  "fields": {
+    "name": "эрлан",
+    "email": "vasya@mail.com",
+    "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the",
+    "cread_date": "2021-03-06T11:37:31.779Z",
+    "update_date": "2021-03-06T11:37:31.779Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guest",
+  "pk": 16,
+  "fields": {
+    "name": "Вася",
+    "email": "vasya@mail.com",
+    "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the",
+    "cread_date": "2021-03-06T11:37:47.486Z",
+    "update_date": "2021-03-06T11:37:47.486Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guest",
+  "pk": 17,
+  "fields": {
+    "name": "Джени",
+    "email": "jenni@gmail.com",
+    "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the",
+    "cread_date": "2021-03-06T11:38:20.889Z",
+    "update_date": "2021-03-06T11:54:19.442Z",
+    "status": "active"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$216000$plT5KC2PqZYI$rgU2xwWkFyyLVRrpB3qb8ey3HQbpdiG8EJ+dfUWBHqo=",
+    "last_login": "2021-03-06T06:55:15.311Z",
+    "is_superuser": true,
+    "username": "aijan",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@mail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-03-06T06:55:00.431Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
